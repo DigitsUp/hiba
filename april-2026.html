@@ -846,129 +846,139 @@
   }
 
   /* FAMILY SPOTLIGHT */
-  .spotlight-card {
+  .spotlight-wrap {
+    margin-top: 24px;
+  }
+  .journey-map {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0;
     background: var(--light);
     border: 1px solid #e8edf4;
     border-radius: 12px;
-    padding: 32px;
-    margin-top: 24px;
+    padding: 28px 20px 20px;
+    margin-bottom: 16px;
   }
-  .spotlight-source {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    margin-bottom: 28px;
-    padding-bottom: 20px;
-    border-bottom: 1px solid #e8edf4;
-  }
-  .source-badge {
-    background: #1877F2;
-    color: #fff;
-    font-size: 11px;
-    font-weight: 700;
-    letter-spacing: 0.5px;
-    padding: 4px 10px;
-    border-radius: 20px;
-    white-space: nowrap;
-  }
-  .source-detail {
-    font-size: 13px;
-    color: var(--gray-600);
-  }
-  .spotlight-journey {
+  .jm-step {
     display: flex;
     flex-direction: column;
-    gap: 0;
-    margin-bottom: 28px;
-    position: relative;
+    align-items: center;
+    text-align: center;
+    min-width: 80px;
+    max-width: 100px;
   }
-  .journey-step {
+  .jm-step--highlight {
+    background: #eef4ff;
+    border-radius: 10px;
+    padding: 8px 6px;
+  }
+  .jm-step--gold {
+    background: #fffbf0;
+    border-radius: 10px;
+    padding: 8px 6px;
+  }
+  .jm-icon {
+    font-size: 26px;
+    margin-bottom: 8px;
+    line-height: 1;
+  }
+  .jm-icon--meta {
+    background: #1877F2;
+    color: #fff;
+    border-radius: 8px;
+    width: 36px;
+    height: 36px;
     display: flex;
-    gap: 20px;
-    position: relative;
-    padding-bottom: 24px;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    margin-bottom: 8px;
   }
-  .journey-step:last-child {
-    padding-bottom: 0;
-  }
-  .journey-dot {
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    background: var(--navy);
-    flex-shrink: 0;
-    margin-top: 5px;
-    position: relative;
-    z-index: 1;
-  }
-  .journey-dot--gold {
-    background: var(--gold);
-    width: 14px;
-    height: 14px;
-  }
-  .journey-step:not(:last-child) .journey-dot::after {
-    content: '';
-    position: absolute;
-    left: 50%;
-    top: 12px;
-    transform: translateX(-50%);
-    width: 2px;
-    background: #dde3ed;
-    bottom: -24px;
-  }
-  .journey-date {
-    font-size: 11px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    color: var(--gold);
-    margin-bottom: 4px;
-  }
-  .journey-title {
-    font-size: 15px;
+  .jm-label {
+    font-size: 12px;
     font-weight: 700;
     color: var(--navy);
-    margin-bottom: 6px;
+    margin-bottom: 4px;
+    line-height: 1.2;
   }
-  .journey-desc {
-    font-size: 13px;
+  .jm-step--gold .jm-label {
+    color: #b07800;
+  }
+  .jm-sub {
+    font-size: 11px;
     color: var(--gray-600);
-    line-height: 1.7;
+    line-height: 1.4;
   }
-  .spotlight-result {
+  .jm-arrow {
+    font-size: 18px;
+    color: #c5cfe0;
+    padding: 0 4px;
+    margin-top: 18px;
+    flex-shrink: 0;
+  }
+  .jm-arrow--gold {
+    color: var(--gold);
+  }
+  .spotlight-bottom {
+    display: flex;
+    gap: 20px;
+    align-items: stretch;
+  }
+  .spotlight-stat-box {
     background: var(--navy);
     color: #fff;
-    border-radius: 10px;
-    padding: 20px 24px;
+    border-radius: 12px;
+    padding: 24px 20px;
     text-align: center;
-    margin-bottom: 20px;
+    min-width: 110px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
-  .spotlight-result-stat {
-    font-size: 40px;
+  .spotlight-big-num {
+    font-size: 52px;
     font-weight: 800;
     color: var(--gold);
     line-height: 1;
   }
-  .spotlight-result-label {
+  .spotlight-big-label {
+    font-size: 11px;
+    color: rgba(255,255,255,0.7);
+    margin-top: 6px;
+    line-height: 1.5;
+  }
+  .spotlight-note-box {
+    flex: 1;
+    background: var(--light);
+    border: 1px solid #e8edf4;
+    border-radius: 12px;
+    padding: 20px 24px;
+  }
+  .spotlight-note-name {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 8px;
+  }
+  .spotlight-note-text {
     font-size: 13px;
-    color: rgba(255,255,255,0.75);
-    margin-top: 4px;
+    color: var(--gray-700);
+    line-height: 1.7;
     margin-bottom: 10px;
   }
-  .spotlight-result-path {
+  .spotlight-note-tail {
     font-size: 12px;
-    color: rgba(255,255,255,0.6);
-    font-style: italic;
-  }
-  .spotlight-note {
-    font-size: 13px;
     color: var(--gray-600);
     font-style: italic;
-    line-height: 1.7;
+    line-height: 1.6;
     border-left: 3px solid var(--gold);
-    padding-left: 16px;
+    padding-left: 12px;
   }
 
+  /* WATCHING LIST */
   /* WATCHING LIST */
   .watching-list {
     display: flex;
@@ -1484,8 +1494,8 @@
       </div>
 
       <div class="callout-blue" style="margin-top:20px;">
-        <div style="font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--blue);margin-bottom:8px;">Still in Queue: Subject Line Testing</div>
-        <p style="color:var(--gray-800);">Subject line split testing on Emails 3–5 was recommended in March. Still in queue — flag for May prioritization.</p>
+        <div style="font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--blue);margin-bottom:8px;">Coming in May: Subject Line Testing</div>
+        <p style="color:var(--gray-800);">In May we'll be setting up subject line split tests on Emails 3–5 — targeted copy changes on mid-sequence emails where novelty has worn off. Small adjustments here can meaningfully lift open rates.</p>
       </div>
     </div>
 
@@ -1537,70 +1547,67 @@
     <div class="section-title">From Ad Click to Application — In 8 Days</div>
     <div class="section-subtitle">A real look at how the funnel works when everything connects.</div>
 
-    <div class="spotlight-card">
-      <div class="spotlight-source">
-        <span class="source-badge">META Ads</span>
-        <span class="source-detail">Branding &amp; Events Lead Gen Campaign 2026 · Facebook Mobile Feed</span>
-      </div>
+    <div class="spotlight-wrap">
 
-      <div class="spotlight-journey">
+      <!-- Journey Map -->
+      <div class="journey-map">
 
-        <div class="journey-step">
-          <div class="journey-dot"></div>
-          <div class="journey-content">
-            <div class="journey-date">January 5–7</div>
-            <div class="journey-title">Found via Meta Ad</div>
-            <div class="journey-desc">Jacqueline found Hiba through a Facebook Mobile Feed ad from the Branding &amp; Events Lead Gen Campaign. She visited the site three times over three days before taking action — exploring on her own terms.</div>
-          </div>
+        <div class="jm-step">
+          <div class="jm-icon jm-icon--meta">📱</div>
+          <div class="jm-label">Meta Ad</div>
+          <div class="jm-sub">Facebook Mobile Feed<br>Jan 5</div>
         </div>
+        <div class="jm-arrow">→</div>
 
-        <div class="journey-step">
-          <div class="journey-dot"></div>
-          <div class="journey-content">
-            <div class="journey-date">January 7</div>
-            <div class="journey-title">Signed up for the Open House</div>
-            <div class="journey-desc">She registered for the January 10 Open House and was added to the list. Within minutes she received her confirmation email — and opened it the next morning.</div>
-          </div>
+        <div class="jm-step">
+          <div class="jm-icon">🔍</div>
+          <div class="jm-label">Site Visits</div>
+          <div class="jm-sub">3 visits over<br>3 days</div>
         </div>
+        <div class="jm-arrow">→</div>
 
-        <div class="journey-step">
-          <div class="journey-dot"></div>
-          <div class="journey-content">
-            <div class="journey-date">January 9</div>
-            <div class="journey-title">Entered the Welcome Series</div>
-            <div class="journey-desc">Welcome Email 1 landed in her inbox. She opened it the same day — and came back to it again on January 15, a sign she was actively researching.</div>
-          </div>
+        <div class="jm-step">
+          <div class="jm-icon">📋</div>
+          <div class="jm-label">Event Signup</div>
+          <div class="jm-sub">Open House<br>Jan 7</div>
         </div>
+        <div class="jm-arrow">→</div>
 
-        <div class="journey-step">
-          <div class="journey-dot"></div>
-          <div class="journey-content">
-            <div class="journey-date">January 10–12</div>
-            <div class="journey-title">Attended the Open House. Then signed up for a Discovery Walk.</div>
-            <div class="journey-desc">She attended the Open House on January 10. Two days later she registered for a Discovery Walk — and attended that too. Two events in one week.</div>
-          </div>
+        <div class="jm-step">
+          <div class="jm-icon">🏫</div>
+          <div class="jm-label">Attended</div>
+          <div class="jm-sub">Open House +<br>Discovery Walk</div>
         </div>
+        <div class="jm-arrow">→</div>
 
-        <div class="journey-step">
-          <div class="journey-dot journey-dot--gold"></div>
-          <div class="journey-content">
-            <div class="journey-date">January 13–15</div>
-            <div class="journey-title">The follow-up email did its job</div>
-            <div class="journey-desc">After the Discovery Walk, she received the automated "Thank You for Joining Us!" event follow-up email. She opened it, clicked to the inquiry page on January 13 — then returned on January 15 and clicked the <strong>apply-now page three times</strong>. Ravenna Inquiry set to true.</div>
-          </div>
+        <div class="jm-step jm-step--highlight">
+          <div class="jm-icon">✉️</div>
+          <div class="jm-label">Follow-Up Email</div>
+          <div class="jm-sub">Clicked apply-now<br>3× on Jan 15</div>
+        </div>
+        <div class="jm-arrow jm-arrow--gold">→</div>
+
+        <div class="jm-step jm-step--gold">
+          <div class="jm-icon">⭐</div>
+          <div class="jm-label">Ravenna Inquiry</div>
+          <div class="jm-sub">Application<br>started</div>
         </div>
 
       </div>
 
-      <div class="spotlight-result">
-        <div class="spotlight-result-stat">8 days</div>
-        <div class="spotlight-result-label">from first site visit to Ravenna inquiry</div>
-        <div class="spotlight-result-path">Meta Ad → Open House → Discovery Walk → Event Follow-Up Email → Application</div>
+      <!-- Stat + Note Row -->
+      <div class="spotlight-bottom">
+        <div class="spotlight-stat-box">
+          <div class="spotlight-big-num">8</div>
+          <div class="spotlight-big-label">days from first<br>site visit to inquiry</div>
+        </div>
+        <div class="spotlight-note-box">
+          <div class="spotlight-note-name">Jacqueline Torres</div>
+          <div class="spotlight-note-text">Found Hiba through a Meta ad, explored the site three times before signing up, attended two events in one week, and submitted a Ravenna inquiry after clicking the apply-now page three times from a single follow-up email.</div>
+          <div class="spotlight-note-tail">She's continued opening every campaign since — newsletters, event invites, and the April Oogubi email. The funnel didn't just convert her. It kept her.</div>
+        </div>
       </div>
 
-      <div class="spotlight-note">
-        Jacqueline has continued engaging with every campaign since — newsletters, event invites, and the April Oogubi Wonderland email. She's not a one-time click. She's exactly who the funnel is built for.
-      </div>
     </div>
 
     <div class="section-divider"></div>
@@ -1621,7 +1628,7 @@
         <div class="next-card-title">Focus for May</div>
         <ul class="next-list">
           <li>Monitor LTN flow performance across all three tracks — first full month of data</li>
-          <li>Subject line split testing on Welcome Emails 3–5 (still in queue from March recommendation)</li>
+          <li>Launch subject line split testing on Welcome Emails 3–5 — targeted copy changes to lift mid-sequence open rates</li>
           <li>Continue enrollment campaign emails as the Fall 2026 application window progresses</li>
         </ul>
       </div>
